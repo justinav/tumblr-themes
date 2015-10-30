@@ -51,6 +51,7 @@ media="all" rel="stylesheet" type="text/css">
 <meta name="if:Show Blogroll" content="0">
 <meta name="if:Show Tags" content="0">
 <meta name="if:Underline Links" content="0">
+<meta name="if:Hide Theme Credit" content="0">
 <meta name="text:Disqus Shortname" content="">
 <meta name="text:Google Analytics ID" content="">
 
@@ -443,6 +444,10 @@ footer > div.credit {
 font-size: 10px;
 color: {color:Text};
 }
+
+{block:IfHideThemeCredit}
+.credit { display: none;}
+{/block:IfHideThemeCredit}
 
 /* Laptops + Desktops */
 @media (min-width: 1024px){
@@ -888,7 +893,7 @@ dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
 </div>
 
 <div class="credit">
-Theme by <a href="http://justinavillanueva.com/">Justina</a>. Powered by <a href="https://www.tumblr.com/">Tumblr</a>.
+Theme by <a href="http://jusv.co">Justina</a>. Powered by <a href="https://www.tumblr.com/">Tumblr</a>.
 </div>
 </footer><!-- Javascript: jquery -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
