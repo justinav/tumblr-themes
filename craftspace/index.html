@@ -459,7 +459,7 @@ max-width: 950px;
 
 /* container */
 .c{
-width: 700px; 
+width: 700px;
 padding: 25px;
 float: left;
 margin: 0px 0px 30px 0px;
@@ -490,7 +490,7 @@ text-align: center;
 
 /* sidebar */
 .sc {
-float: right;  
+float: right;
 }
 
 .s{
@@ -506,7 +506,7 @@ width: 100%;
 margin: 0 auto;
 display: block;
 }
-} 
+}
 
 /* Tablets */
 @media (min-width: 760px)
@@ -518,7 +518,7 @@ max-width: 740px;
 }
 /* container */
 .c{
-width: 550px; 
+width: 550px;
 padding: 10px;
 float: left;
 margin: 0px 0px 30px 0px;
@@ -545,7 +545,7 @@ text-align: center;
 
 /* sidebar */
 .sc {
-word-wrap: break-word; 
+word-wrap: break-word;
 float: right;
 }
 
@@ -576,7 +576,7 @@ max-width: 100%;
 /* container */
 .c{
 margin: 0 auto;
-max-width: 100%; 
+max-width: 100%;
 padding: 25px 25px 40px;
 }
 
@@ -592,9 +592,9 @@ padding: 25px 25px 40px;
 vertical-align: top;
 }
 
-input, textarea, select{ 
--webkit-appearance: none; 
-border-radius: 0; 
+input, textarea, select{
+-webkit-appearance: none;
+border-radius: 0;
 -webkit-border-radius:0;
 }
 
@@ -644,7 +644,7 @@ display: block;
 </li>
 
 </ul>
-</nav>{/block:IfShowTopNavigation} 
+</nav>{/block:IfShowTopNavigation}
 
 {block:IfShowLogoAsText}
 <h1 id="logo"><a href="{BlogURL}">{Title}</a></h1>{/block:IfShowLogoAsText}
@@ -664,7 +664,7 @@ display: block;
 {block:TagPage}
 <div class="result">
 <p>{lang:TagResultCount posts tagged Tag 3}</p>
-</div>{/block:TagPage} 
+</div>{/block:TagPage}
 
 <!--SIDEBAR-->
 
@@ -688,7 +688,7 @@ display: block;
 "text" value="{SearchQuery}">
 </form>
 </div>
-{/block:IfShowSearch} 
+{/block:IfShowSearch}
 
 {block:IfShowSidebarMenu}
 <div class="s sidebarnav">
@@ -740,7 +740,7 @@ display: block;
 <div class="text">
 {block:Title}<h3>{Title}</h3>{/block:Title}
 {Body}
-</div>{/block:Text} 
+</div>{/block:Text}
 
 {block:Quote}
 <div class="quote">
@@ -748,52 +748,52 @@ display: block;
 {Quote}
 </blockquote>{block:Source}
 <p class="source">&mdash; {Source} &mdash;</p>{/block:Source}
-</div>{/block:Quote} 
+</div>{/block:Quote}
 
 {block:Link}
 <div class="link">
 <h3><a href="{URL}">{Name}</a></h3>
 {block:Description}<div class="caption">{Description}</div>{/block:Description}
-</div>{/block:Link} 
+</div>{/block:Link}
 
 {block:Video}
 <div class="video">
-{Video-500} 
+{Video-500}
 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-</div>{/block:Video} 
+</div>{/block:Video}
 
 {block:Audio}
 <div class="audio">
-{block:AlbumArt}<img alt="" src="{AlbumArtURL}" width="100%">{/block:AlbumArt} 
-{AudioEmbed} 
+{block:AlbumArt}<img alt="" src="{AlbumArtURL}" width="100%">{/block:AlbumArt}
+{AudioEmbed}
 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-</div>{/block:Audio} 
+</div>{/block:Audio}
 
 {block:Photo}
 <div class="photo">
-{LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-HighRes}">{LinkCloseTag} 
+{LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-HighRes}">{LinkCloseTag}
 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-</div>{/block:Photo} 
+</div>{/block:Photo}
 
 {block:Photoset}
 <div class="photoset">
-{block:IfShowSidebar} 
-{Photoset} 
+{block:IfShowSidebar}
+{Photoset}
 {block:Caption}
-<div class="caption">{Caption}</div>{/block:Caption} 
+<div class="caption">{Caption}</div>{/block:Caption}
 {/block:IfShowSidebar}
 {block:IfNotShowSidebar}
-{block:Photos}<img class="highres" src="{PhotoURL-HighRes}">{/block:Photos} 
+{block:Photos}<img class="highres" src="{PhotoURL-HighRes}">{/block:Photos}
 {block:Caption}
-<div class="caption">{Caption}</div>{/block:Caption} 
+<div class="caption">{Caption}</div>{/block:Caption}
 {/block:IfNotShowSidebar}
-</div>{/block:Photoset} 
+</div>{/block:Photoset}
 
 {block:Panorama}
 <div class="panorama">
-{LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-Panorama}">{LinkCloseTag} 
+{LinkOpenTag}<img alt="{PhotoAlt}" src="{PhotoURL-Panorama}">{LinkCloseTag}
 {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-</div>{/block:Panorama} 
+</div>{/block:Panorama}
 
 {block:Chat}
 <div class="chat">
@@ -806,7 +806,7 @@ display: block;
 "person-said">{Line}</span></li>
 <li>{/block:Lines}</li>
 </ul>
-</div>{/block:Chat} 
+</div>{/block:Chat}
 
 {block:Answer}
 <div class="answer">
@@ -896,31 +896,31 @@ dsq.src = 'http://{text:Disqus Shortname}.disqus.com/embed.js';
 Theme by <a href="http://jusv.co">Justina</a>. Powered by <a href="https://www.tumblr.com/">Tumblr</a>.
 </div>
 </footer><!-- Javascript: jquery -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 <!-- Javascript: adjust video + audio iframes for mobile-->
 <script src="http://static.tumblr.com/qvtfufx/H56mpjuti/jquery.fitvids.js"
 type="text/javascript"></script> <script type="text/javascript">
 $('.video').fitVids();
-</script> 
+</script>
 
 <!-- Javascript: adjust photoset iframe for mobile-->
 <script type="text/javascript">
 function resizePhotosets(){
-var parentWidth = document.body.querySelector('.html_photoset').offsetWidth; 
+var parentWidth = document.body.querySelector('.html_photoset').offsetWidth;
 var photosets = document.body.querySelectorAll('iframe.photoset');
 for(var i = 0; i < photosets.length; ++i){
 var photoset = photosets[i];
 photoset.width = parentWidth;
-}   
+}
 }
 window.onload = resizePhotosets;
 window.onresize = resizePhotosets;
 // if using Infinite Scroll, call resizePhotosets() in it's callback function.
-</script> 
+</script>
 
 <!-- Javascript: Google Analytics -->
-{block:IfGoogleAnalyticsID} 
+{block:IfGoogleAnalyticsID}
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -928,7 +928,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', '{text:Google Analytics ID}', 'tumblr.com');
 ga('send', 'pageview');
-</script> 
+</script>
 {/block:IfGoogleAnalyticsID}
 
 </body>
