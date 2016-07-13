@@ -15,20 +15,19 @@
   <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
   {block:Description}<meta content="{MetaDescription}" name="description">{/block:Description}
 
+  <!--Normalize 3.0.0 CSS-->
+  <link href="http://static.tumblr.com/cqczc5x/FJTn2lpnz/normalize.css"
+  media="all" rel="stylesheet" type="text/css">
+
   <!--Google Fonts-->
   <link href='http://fonts.googleapis.com/css?family=Pathway+Gothic+One' rel=
   'stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700'
   rel='stylesheet' type='text/css'>
 
-  {block:Hidden}
   <!--Fonts-->
   <meta name="font:Body" content="'Quicksand', Helvetica, sans-serif"/>
   <meta name="font:Title" content="'Pathway Gothic One', helvetica, sans-serif;"/>
-
-  <!--Normalize 3.0.0 CSS-->
-  <link href="http://static.tumblr.com/cqczc5x/FJTn2lpnz/normalize.css"
-  media="all" rel="stylesheet" type="text/css">
 
   <!-- Colors -->
   <meta name="color:Header" content="#F3F3F3">
@@ -74,7 +73,6 @@
   <meta name="text:Blogroll5 Name" content="" >
   <meta name="text:Blogroll6 Link" content="" >
   <meta name="text:Blogroll6 Name" content="" >
-  {/block:Hidden}
 </head>
 
 <style type="text/css">
@@ -132,7 +130,7 @@
     display: block;
   }
 
-  header, footer{
+  header, footer {
     text-align: center;
   }
 
@@ -146,7 +144,7 @@
   }
 
   blockquote {
-    border-left: 2px solid {AccentColor};
+    border-left:; 2px solid {AccentColor};
     padding-left: 12px;
   }
 
@@ -183,19 +181,24 @@
   }
 
   /* Content Container */
+  .wrapper:before,
+  .wrapper:after {
+    display: table;
+    content: '';
+  }
+
+  .wrapper:after {
+    clear: both;
+  }
+
   .cc {
     margin: 0 auto;
     padding: 0;
   }
 
-  .cc:before,
-  .cc:after {
-    content: " ";
-    display: block;
-  }
-
-  .cc:after {
-    clear: both;
+  .cc,
+  .sc {
+    overflow: hidden;
   }
 
   /* Container */
@@ -477,7 +480,7 @@
       width: 100%;
       float: none;
     }
-    .c{
+    .c {
       width:100%;
       margin: 0px auto 1.5em;
     }
@@ -489,11 +492,11 @@
     div.text > h3,
     div.text > h4,
     div.text > h5,
-    div.text > h6{
+    div.text > h6 {
       max-width: 700px;
       margin: 0 auto;
     }
-    div.text > h3{
+    div.text > h3 {
       text-align: center;
     }
     {/block:IfNotShowSidebar}
@@ -505,13 +508,13 @@
       padding-left: 10px;
     }
 
-    .s{
+    .s {
       padding: 25px;
     }
 
     /* Posts: Video + Audio Player */
     div.video > iframe,
-    div.audio > iframe{
+    div.audio > iframe {
       width: 100%;
       margin: 0 auto;
       display: block;
@@ -526,7 +529,7 @@
       max-width: 740px;
       margin: 0 auto;
     }
-    .cc{
+    .cc {
       overflow: hidden;
       width: 70%;
       padding-right: 10px;
@@ -537,16 +540,16 @@
     }
 
     {block:IfNotShowSidebar}
-    .cc{
+    .cc {
       width: 100%;
       padding: 10px;
       float: none;
     }
-    div.text > p{
+    div.text > p {
       max-width: 700px;
       margin: 0 auto;
     }
-    div.text > h3{
+    div.text > h3 {
       text-align: center;
     }
     {/block:IfNotShowSidebar}
@@ -561,12 +564,11 @@
 
     /* Posts: Video + Audio Player */
     div.video > iframe,
-    div.audio > iframe{
+    div.audio > iframe {
       width: 100%;
       margin: 0 auto;
       display: block;
     }
-
   }
 
   /* Mobile, Smartphones, iPhone */
@@ -801,7 +803,6 @@
 
       {block:IfShowSidebar} <!--SIDEBAR-->
       <aside class="sc">
-
         <div class="s">
           {block:IfShowAvatar}
           <a href="/"><img class="avatar" src="{PortraitURL-96}"></a>
@@ -809,7 +810,8 @@
           {block:IfShowDescription}{block:Description}
           <div class="d">
             {Description}
-          </div>{/block:Description}{/block:IfShowDescription}
+          </div>
+          {/block:Description}{/block:IfShowDescription}
         </div>
 
         {block:IfShowSearch}
@@ -892,7 +894,9 @@
         <div class="credit">
           Theme by <a href="http://jusv.co">Justina</a>. Powered by <a href="https://www.tumblr.com/">Tumblr</a>.
         </div>
-      </footer><!-- Javascript: jquery -->
+      </footer>
+
+      <!-- Javascript: jquery -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
       <!-- Javascript: adjust video + audio iframes for mobile-->
@@ -913,20 +917,20 @@
       }
       window.onload = resizePhotosets;
       window.onresize = resizePhotosets;
-// if using Infinite Scroll, call resizePhotosets() in it's callback function.
-</script>
+      // if using Infinite Scroll, call resizePhotosets() in it's callback function.
+    </script>
 
-<!-- Javascript: Google Analytics -->
-{block:IfGoogleAnalyticsID}
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', '{text:Google Analytics ID}', 'tumblr.com');
-  ga('send', 'pageview');
-</script>
-{/block:IfGoogleAnalyticsID}
+    <!-- Javascript: Google Analytics -->
+    {block:IfGoogleAnalyticsID}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', '{text:Google Analytics ID}', 'tumblr.com');
+      ga('send', 'pageview');
+    </script>
+    {/block:IfGoogleAnalyticsID}
 
-</body>
-</html>
+  </body>
+  </html>
